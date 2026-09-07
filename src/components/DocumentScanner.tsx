@@ -1022,7 +1022,12 @@ export default function DocumentScanner({ locale = "es" }: Props) {
             </button>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          {/* Sticky on mobile: a full-height portrait photo can push these
+              buttons far below the fold with no hint they exist — pinning them
+              to the bottom of the scroll viewport means Guardar/Descartar are
+              always reachable without hunting. Desktop has no such tall-image
+              scroll problem, so it stays in normal flow there. */}
+          <div className="sticky bottom-0 z-10 -mx-4 -mb-4 flex flex-wrap gap-2 border-t border-border/30 bg-surface/95 px-4 py-3 backdrop-blur-md sm:static sm:mx-0 sm:mb-0 sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:backdrop-blur-none">
             <button onClick={() => savePage("gallery")} disabled={!!busy} className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary/10 px-4 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/20 disabled:opacity-50">
               <FiCheck /> {busy || (isEs ? "Guardar" : "Save")}
             </button>

@@ -5,12 +5,12 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://miguelacm.es/tools
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "Document Scanner — free, in your browser", template: "%s | Document Scanner" },
-  description: "Scan documents with your camera on any background, straighten the perspective, auto-rotate and export to a searchable-text PDF. 100% in your browser, nothing uploaded.",
+  title: { default: "Document Scanner — Free Online Tool", template: "%s | Document Scanner" },
+  description: "Scan documents with your camera, fix the perspective, apply filters and export to PDF. Multi-page and OCR.",
   authors: [{ name: "Miguel Ángel Colorado Marin", url: "https://miguelacm.es" }],
   creator: "Miguel Ángel Colorado Marin",
-  openGraph: { title: "Document Scanner — free, in your browser", description: "Scan documents with your camera on any background and export to a searchable-text PDF. 100% in your browser.", url: SITE_URL, siteName: "Document Scanner — MACM", type: "website" },
-  twitter: { card: "summary_large_image", title: "Document Scanner — free, in your browser", description: "Scan documents with your camera on any background and export to a searchable-text PDF. 100% in your browser." },
+  openGraph: { title: "Document Scanner — Free Online Tool", description: "Scan documents with your camera, fix the perspective, apply filters and export to PDF. Multi-page and OCR.", url: SITE_URL, siteName: "Document Scanner — MACM", type: "website" },
+  twitter: { card: "summary_large_image", title: "Document Scanner — Free Online Tool", description: "Scan documents with your camera, fix the perspective, apply filters and export to PDF. Multi-page and OCR." },
   robots: { index: true, follow: true },
 };
 
